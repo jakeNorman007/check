@@ -1,10 +1,8 @@
 package main
 
 import (
-    "github.com/gin-gonic/gin"
     "github.com/JakeNorman007/check/initializers"
-    "github.com/JakeNorman007/check/controllers"
-    
+    "github.com/JakeNorman007/check/models"
 )
 
 func init() {
@@ -13,9 +11,5 @@ func init() {
 }
 
 func main() {
-    r := gin.Default()
-
-    r.GET("/", controllers.TodosCreate)
-
-	r.Run()
+    initializers.DB.AutoMigrate(&models.Todo{})
 }
