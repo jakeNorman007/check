@@ -40,9 +40,7 @@ func TodosIndex(c *gin.Context){
     initializers.DB.Find(&todos)
 
     // responds with all of the todo items that curerntly exist
-    c.JSON(200, gin.H{
-        "todos": todos,
-    })
+    c.JSON(200, todos)
 }
 
 func TodosUpdate(c *gin.Context){

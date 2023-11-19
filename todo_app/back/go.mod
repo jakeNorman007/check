@@ -3,6 +3,7 @@ module github.com/JakeNorman007/check
 go 1.21.1
 
 require (
+	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/joho/godotenv v1.5.1
 	gorm.io/driver/postgres v1.5.4
